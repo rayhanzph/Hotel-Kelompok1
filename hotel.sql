@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 24, 2021 at 02:31 AM
+-- Generation Time: Dec 24, 2021 at 07:21 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -158,7 +158,9 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (21, '::1', 'pelanggan2@gmail.com', 4, '2021-12-21 08:32:04', 1),
 (22, '::1', 'pelanggan2@gmail.com', 4, '2021-12-21 09:41:02', 1),
 (23, '::1', 'admin@admin.com', 3, '2021-12-23 18:18:38', 1),
-(24, '::1', 'pelanggan2@gmail.com', 4, '2021-12-23 18:49:54', 1);
+(24, '::1', 'pelanggan2@gmail.com', 4, '2021-12-23 18:49:54', 1),
+(25, '::1', 'pelanggan2@gmail.com', 4, '2021-12-24 00:05:57', 1),
+(26, '::1', 'admin@admin.com', 3, '2021-12-24 00:08:46', 1);
 
 -- --------------------------------------------------------
 
@@ -237,6 +239,13 @@ CREATE TABLE `booking` (
   `booking_status` enum('pending','ongoing','done') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `booking`
+--
+
+INSERT INTO `booking` (`booking_id`, `booking_price`, `booking_date_start`, `booking_date_stop`, `booking_proof_of_payment`, `booking_id_items`, `booking_id_customer`, `booking_status`) VALUES
+(1, 10000000, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '/images/proof/background j2me.png', 6, 2, 'pending');
+
 -- --------------------------------------------------------
 
 --
@@ -271,7 +280,7 @@ CREATE TABLE `customer` (
 
 INSERT INTO `customer` (`customer_id`, `customer_name`, `customer_telp`, `customer_address`, `user_id`) VALUES
 (1, 'Masukkan nama anda', 'Masukkan no hp', 'Masukkan alamat anda', 1),
-(2, 'Ini Nama Pelanggan Dua', '081222222222', 'Rumah Pelanggan Dua', 4);
+(2, 'Pelanggan DUA', '081222222222', 'Rumah Pelanggan Dua', 4);
 
 -- --------------------------------------------------------
 
@@ -296,8 +305,14 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`items_id`, `items_name`, `items_type`, `items_city`, `items_address`, `items_price`, `items_desc`, `items_facility`, `items_image_id`) VALUES
-(2, 'Hotel Dua', 'hotel', 'Surakarta', 'Alamat Hotel', 1500000, 'Deskripsi Lokasi Hotel', 'Fasilitas Hotel', 3),
-(3, 'Hotel Tiga', 'hotel', 'Jakarta', 'Alamat Hotel Tiga', 3000000, 'Deskripsi Hotel 3', 'Fasilitas Hotel 3', 6);
+(2, 'Dua Lipa', 'villa', 'Surakarta', 'Surakarta, Jawa Tengah', 1500000, 'Deskripsi Lokasi Hotel', 'Fasilitas Hotel Dua Lipaa', 3),
+(3, 'Tiga Dara', 'hotel', 'Jakarta', 'Jakarta Pusat', 3000000, 'Deskripsi Hotel 3', 'Fasilitas Hotel 3', 6),
+(4, 'Java Heritage', 'hotel', 'Purwokerto', 'Purwokerto, Jawa Tengah', 550000, 'Deskripsi Hotel 4', 'Fasilitas Hotel 4', 9),
+(5, 'Hotel Box', 'hotel', 'Yogyakarta', 'Sleman, Yogyakarta', 300000, 'Deskripsi hotel 5', 'hotel 5 fasilitas', 12),
+(6, 'Villa TW A', 'villa', 'Karanganyar', 'Tawangmangu, Karanganyar', 10000000, 'Alamat Villa TW A', 'Fasilitas Villa TW A', 15),
+(8, 'Villa TW C', 'villa', 'Karanganyar', 'Tawangmangu, Karanganyar', 2500000, 'Deskripsi Villa TW C', 'Fasilitas Villa TW C', 21),
+(9, 'Villa Baturraden', 'villa', 'Purwokerto', 'Baturraden, Banyumas', 1500000, 'Dekripsi Villa Baturraden', 'Fasilitas Villa Baturraden', 24),
+(10, 'Villa C-3', 'villa', 'Semarang', 'JL. Semarang 1', 2300000, 'Deskripsi Villa C-3', 'Fasilitas Villa C-3', NULL);
 
 -- --------------------------------------------------------
 
@@ -323,7 +338,25 @@ INSERT INTO `items_image` (`items_image_id`, `items_id`, `items_image`) VALUES
 (5, 2, '/images/items/room-3.jpg'),
 (6, 3, '/images/items/hotel-4.jpg'),
 (7, 3, '/images/items/room-4.jpg'),
-(8, 3, '/images/items/room-5.jpg');
+(8, 3, '/images/items/room-5.jpg'),
+(9, 4, '/images/items/hotel4-1.jpg'),
+(10, 4, '/images/items/hotel4-2.jpg'),
+(11, 4, '/images/items/hotel4-3.jpg'),
+(12, 5, '/images/items/hotel5-1.jpg'),
+(13, 5, '/images/items/hotel4-2.jpg'),
+(14, 5, '/images/items/hotel4-3.jpg'),
+(15, 6, '/images/items/villa6-1.jpg'),
+(16, 6, '/images/items/villa6-2.jpg'),
+(17, 6, '/images/items/villa6-3.jpg'),
+(18, NULL, '/images/items/villa7-1.jpg'),
+(19, NULL, '/images/items/villa7-2.jpg'),
+(20, NULL, '/images/items/villa7-3.jpg'),
+(21, 8, '/images/items/villa8-1.jpg'),
+(22, 8, '/images/items/villa8-2.jpg'),
+(23, 8, '/images/items/villa8-3.jpg'),
+(24, 9, '/images/items/villa9-1.jpg'),
+(25, 9, '/images/items/villa9-2.jpg'),
+(26, 9, '/images/items/villa9-3.jpg');
 
 -- --------------------------------------------------------
 
@@ -531,7 +564,7 @@ ALTER TABLE `auth_groups`
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
@@ -555,7 +588,7 @@ ALTER TABLE `auth_tokens`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `booking_id` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `booking_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `confirmation`
@@ -573,13 +606,13 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `items_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `items_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `items_image`
 --
 ALTER TABLE `items_image`
-  MODIFY `items_image_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `items_image_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `migrations`

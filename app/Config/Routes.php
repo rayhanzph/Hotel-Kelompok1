@@ -31,6 +31,8 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+$routes->delete('/items/(:num)', 'Items::deleteItem/$1',['filter' => 'role:admin']);
+$routes->get('/items/addItem', 'Items::addItem', ['filter' => 'role:admin']);
 $routes->get('/', 'Items::index');
 
 /*

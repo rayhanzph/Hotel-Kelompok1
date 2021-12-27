@@ -89,7 +89,7 @@ class Items extends BaseController
             'items_facility' => $this->request->getPost('fasilitas_item'),
         ];
         $this->itemsModel->addItem($data);
-        session()->setFlashData('pesan', 'Data has added successfully!');
+        session()->setFlashData('pesan', 'Data has been added successfully!');
         return redirect()->to('items/listitems');
     }
 
