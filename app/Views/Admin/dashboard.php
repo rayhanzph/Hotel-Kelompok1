@@ -79,6 +79,12 @@
                 <span class="nav-link-text">Customer</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">
+                <i class="ni ni-circle-08 text-pink"></i>
+                <span class="nav-link-text">Logout</span>
+              </a>
+            </li>
           </ul>
           <!-- Divider -->
           <hr class="my-3">
