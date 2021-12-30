@@ -23,14 +23,14 @@
     <meta name="author" content="Creative Tim">
     <title>Admin</title>
     <!-- Favicon -->
-    <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="/assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/vendor/nucleo/css/nucleo.css" type="text/css">
+    <link rel="stylesheet" href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
     <!-- Argon CSS -->
-    <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+    <link rel="stylesheet" href="/assets/css/argon.css?v=1.2.0" type="text/css">
 </head>
 
 <body>
@@ -40,7 +40,7 @@
             <!-- Brand -->
             <div class="sidenav-header  align-items-center">
                 <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                    <img src="/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
                 </a>
             </div>
             <div class="navbar-inner">
@@ -49,7 +49,7 @@
                     <!-- Nav items -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="<?= base_url('') ?>">
+                            <a class="nav-link " href="<?= base_url('') ?>">
                                 <i class="ni ni-tv-2 text-primary"></i>
                                 <span class="nav-link-text">Dashboard</span>
                             </a>
@@ -73,9 +73,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('Admin/customer') ?>">
+                            <a class="nav-link active" href="<?= base_url('Admin/customer') ?>">
                                 <i class="ni ni-circle-08 text-pink"></i>
                                 <span class="nav-link-text">Customer</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">
+                                <i class="ni ni-circle-08 text-pink"></i>
+                                <span class="nav-link-text">Logout</span>
                             </a>
                         </li>
                     </ul>
@@ -220,13 +226,14 @@
     </div>
     <!-- Argon Scripts -->
     <!-- Core -->
-    <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
-    <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-    <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/js-cookie/js.cookie.js"></script>
+    <script src="/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
     <!-- Argon JS -->
-    <script src="../assets/js/argon.js?v=1.2.0"></script>
+    <script src="/assets/js/argon.js?v=1.2.0"></script>
+    <script src="/assets/js/style.js"></script>
 </body>
 
 </html>

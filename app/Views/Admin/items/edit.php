@@ -23,14 +23,14 @@
     <meta name="author" content="Creative Tim">
     <title>Admin</title>
     <!-- Favicon -->
-    <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="/assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
-    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/vendor/nucleo/css/nucleo.css" type="text/css">
+    <link rel="stylesheet" href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
     <!-- Argon CSS -->
-    <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+    <link rel="stylesheet" href="/assets/css/argon.css?v=1.2.0" type="text/css">
 </head>
 
 <body>
@@ -40,7 +40,7 @@
             <!-- Brand -->
             <div class="sidenav-header  align-items-center">
                 <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                    <img src="/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
                 </a>
             </div>
             <div class="navbar-inner">
@@ -215,7 +215,9 @@
                                 </div>
                                 <hr class="my-4" />
                                 <input type="hidden" name="item_id" value="<?= $item['items_id'] ?>">
-                                <button class="btn btn-primary">Update Item</button>
+                                <div class="d-flex justify-content-end">
+                                <button class="btn btn-primary ">Update Item</button>
+                                </div>
                             </form>
                         </div>
                         <!-- Card footer -->
@@ -229,13 +231,13 @@
     </div>
     <!-- Argon Scripts -->
     <!-- Core -->
-    <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
-    <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-    <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/js-cookie/js.cookie.js"></script>
+    <script src="/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
     <!-- Argon JS -->
-    <script src="../assets/js/argon.js?v=1.2.0"></script>
+    <script src="/assets/js/argon.js?v=1.2.0"></script>
 </body>
 
 </html>

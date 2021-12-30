@@ -86,3 +86,7 @@ Jangan lupa update database!!!
 #### -Fitur untuk CRUD gambar tambahan setiap item masih belum dibuat
 
 - Termasuk view untuk menampilkan banyak gambar untuk satu item juga belum ada
+
+## Update 0.0.6
+- Add Booking View
+- Fix Admin View

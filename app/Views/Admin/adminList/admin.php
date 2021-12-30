@@ -49,13 +49,13 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="<?= base_url('') ?>">
+              <a class="nav-link" href="<?= base_url('') ?>">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?= base_url('Admin/list') ?>">
+              <a class="nav-link active" href="<?= base_url('Admin/list') ?>">
                 <i class="ni ni-single-02 text-yellow"></i>
                 <span class="nav-link-text">Admin</span>
               </a>
@@ -76,6 +76,12 @@
               <a class="nav-link" href="<?= base_url('Admin/customer') ?>">
                 <i class="ni ni-circle-08 text-pink"></i>
                 <span class="nav-link-text">Customer</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">
+                <i class="ni ni-circle-08 text-pink"></i>
+                <span class="nav-link-text">Logout</span>
               </a>
             </li>
           </ul>
@@ -241,6 +247,8 @@
   <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
   <!-- Argon JS -->
   <script src="../assets/js/argon.js?v=1.2.0"></script>
+  <script src="/assets/js/style.js"></script>
+
 </body>
 
 </html>
