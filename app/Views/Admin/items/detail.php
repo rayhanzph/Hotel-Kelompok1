@@ -17,6 +17,11 @@
 <html>
 
 <head>
+
+  <link href="<?= base_url('assets/vendor/nucleo/css/nucleo.css') ?>" rel="stylesheet" />
+  <link href="<?= base_url('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" />
+  <link href="<?= base_url('assets/css/argon.css?v=1.2.0') ?>" rel="stylesheet" />
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">

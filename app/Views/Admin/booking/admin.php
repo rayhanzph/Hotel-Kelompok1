@@ -190,9 +190,9 @@
                                                 <span class="badge badge-dot mr-4">
                                                     <?php
                                                     $color = [
-                                                        'pending' => 'text-yellow',
+                                                        'pending' => 'text-red',
                                                         'ongoing' => 'text-blue',
-                                                        'done' => 'text-red'
+                                                        'done' => 'text-green'
                                                     ]; ?>
                                                     <h3 class="status <?= $color[$booking['booking_status']] ?>"><?= $booking['booking_status'] ?></h3>
                                                 </span>
@@ -201,9 +201,9 @@
                                                 <?php
                                                 $status = ['pending', 'ongoing', 'done'];
                                                 $btn = [
-                                                    'pending' => 'btn-warning',
+                                                    'pending' => 'btn-danger',
                                                     'ongoing' => 'btn-primary',
-                                                    'done' => 'btn-danger'
+                                                    'done' => 'btn-success'
                                                 ];
                                                 foreach ($status as $status) :
                                                     if ($status != $booking['booking_status']) : ?>
