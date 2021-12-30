@@ -112,13 +112,15 @@
                         <div class="col-lg-6 col-5 text-right">
                             <ul class="navbar-nav align-items-end ml-auto ml-md-0 ">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
                                         <div class="media align-items-center">
                                             <span class="avatar avatar-sm rounded-circle">
                                                 <img alt="Image placeholder" src="<?= $admin['admin_photo'] ?>">
                                             </span>
                                             <div class="media-body  ml-2  d-none d-lg-block">
-                                                <span style="color:white;" class="mb-0 text-sm  font-weight-bold"><?= user()->username ?></span>
+                                                <span style="color:white;"
+                                                    class="mb-0 text-sm  font-weight-bold"><?= user()->username ?></span>
                                             </div>
                                         </div>
                                     </a>
@@ -154,13 +156,15 @@
                         </div>
                         <!-- Light table -->
                         <div class="table-responsive">
-                            <form action="<?= base_url('Admin/items/adding') ?>" method="post" enctype="multipart/form-data">
+                            <form action="<?= base_url('Admin/items/adding') ?>" method="post"
+                                enctype="multipart/form-data">
                                 <div class="pl-lg-4">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input-username">Item Name</label>
-                                                <input type="text" id="input-username" name="nama_item" class="form-control">
+                                                <input type="text" id="input-username" name="nama_item"
+                                                    class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -176,14 +180,18 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label class="form-control-label" for="input-first-name">Item City</label>
-                                                <input type="text" id="input-first-name" name="kota_item" class="form-control">
+                                                <label class="form-control-label" for="input-first-name">Item
+                                                    City</label>
+                                                <input type="text" id="input-first-name" name="kota_item"
+                                                    class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label class="form-control-label" for="input-last-name">Item Price</label>
-                                                <input type="number" min="100000" id="input-first-name" name="harga_item" class="form-control">
+                                                <label class="form-control-label" for="input-last-name">Item
+                                                    Price</label>
+                                                <input type="number" min="100000" id="input-first-name"
+                                                    name="harga_item" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -193,27 +201,34 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label class="form-control-label" for="input-address">Item Address</label>
-                                                <input id="input-address" name="alamat_item" class="form-control" type="text">
+                                                <label class="form-control-label" for="input-address">Item
+                                                    Address</label>
+                                                <input id="input-address" name="alamat_item" class="form-control"
+                                                    type="text">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <label class="form-control-label" for="input-city">Item Description</label>
-                                                <textarea style="resize: none;" class="form-control" name="deskripsi_item" id="" cols="30" rows="10"></textarea>
+                                                <label class="form-control-label" for="input-city">Item
+                                                    Description</label>
+                                                <textarea style="resize: none;" class="form-control"
+                                                    name="deskripsi_item" id="" cols="30" rows="10"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <label class="form-control-label" for="input-country">Item Facility</label>
-                                                <textarea style="resize: none;" name="fasilitas_item" class="form-control" id="" cols="30" rows="10"></textarea>
+                                                <label class="form-control-label" for="input-country">Item
+                                                    Facility</label>
+                                                <textarea style="resize: none;" name="fasilitas_item"
+                                                    class="form-control" id="" cols="30" rows="10"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-group">
-                                                <label class="form-control-label" for="input-country">Item Thumbnail</label>
+                                                <label class="form-control-label" for="input-country">Item
+                                                    Thumbnail</label>
                                                 <input type="file" name="thumbnail_item" class="form-control">
                                             </div>
                                         </div>
