@@ -48,7 +48,8 @@ class Items extends BaseController
             return view('Admin/items/detail', $data);
         } else if (in_groups('customer')) {
             $data = [
-                'items' => $this->itemsModel->getItems($id_item)
+                'items' => $this->itemsModel->getItems($id_item),
+                'image' => $this->imageModel->getImages($id_item)
             ];
             return view('pages/book/details', $data);
         }
