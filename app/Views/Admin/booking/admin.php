@@ -106,6 +106,9 @@
                                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                     <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
                                     <li class="breadcrumb-item"><a href="#">Booking List</a></li>
+                                    <!-- TEST JQUERY -->
+                                    <input id="myInput" type="text" placeholder="Search..">
+                                    <!-- TEST JQUERY -->
                                 </ol>
                             </nav>
                         </div>
@@ -165,7 +168,9 @@
                                         <th scope="col">Actions</th>
                                     </tr>
                                 </thead>
-                                <tbody class="list">
+                                <!-- TEST JQUERY -->
+                                <tbody id="myTable" class="list">
+                                    <!-- TEST JQUERY -->
                                     <?php foreach ($booking as $booking) : ?>
                                         <tr>
                                             <th scope="row">
@@ -260,6 +265,20 @@
     <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
     <!-- Argon JS -->
     <script src="../assets/js/argon.js?v=1.2.0"></script>
+
+    <!-- TEST JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+    <!-- TEST JQUERY -->
 </body>
 
 </html>

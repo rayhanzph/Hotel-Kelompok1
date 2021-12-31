@@ -106,6 +106,9 @@
                                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                     <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
                                     <li class="breadcrumb-item"><a href="#">Customers List</a></li>
+                                    <!-- TEST JQUERY -->
+                                    <input id="myInput" type="text" placeholder="Search..">
+                                    <!-- TEST JQUERY -->
                                 </ol>
                             </nav>
                         </div>
@@ -163,7 +166,9 @@
                                         <th scope="col" class="sort" data-sort="city">Customer Email</th>
                                     </tr>
                                 </thead>
-                                <tbody class="list">
+                                <!-- TEST JQUERY -->
+                                <tbody id="myTable" class="list">
+                                    <!-- TEST JQUERY -->
                                     <?php foreach ($customer as $customer) : ?>
                                         <tr>
                                             <th scope="row">
@@ -234,6 +239,20 @@
     <!-- Argon JS -->
     <script src="/assets/js/argon.js?v=1.2.0"></script>
     <script src="/assets/js/style.js"></script>
+
+    <!-- TEST JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+    <!-- TEST JQUERY -->
 </body>
 
 </html>
