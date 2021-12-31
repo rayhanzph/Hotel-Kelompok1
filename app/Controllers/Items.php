@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\AdminModel;
 use App\Models\BookingModel;
 use App\Models\CustomerModel;
+use App\Models\ImageModel;
 use App\Models\ItemsModel;
 
 class Items extends BaseController
@@ -16,6 +17,7 @@ class Items extends BaseController
         $this->customerModel = new CustomerModel();
         $this->adminModel = new AdminModel();
         $this->bookingModel = new BookingModel();
+        $this->imageModel = new ImageModel();
     }
     public function index()
     {
@@ -40,7 +42,8 @@ class Items extends BaseController
         if (in_groups('admin')) {
             $data = [
                 'item' => $this->itemsModel->getItems($id_item),
-                'title' => 'Detail'
+                'title' => 'Detail',
+                'image' => $this->imageModel->getImages($id_item)
             ];
             return view('Admin/items/detail', $data);
         } else if (in_groups('customer')) {
