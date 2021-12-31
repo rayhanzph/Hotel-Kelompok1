@@ -106,9 +106,6 @@
                                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                     <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
                                     <li class="breadcrumb-item"><a href="#">Items List</a></li>
-                                    <!-- TEST JQUERY -->
-                                    <input id="myInput" type="text" placeholder="Search..">
-                                    <!-- TEST JQUERY -->
                                 </ol>
                             </nav>
                         </div>
@@ -154,6 +151,19 @@
                         <!-- Card header -->
                         <div class="card-header border-0">
                             <h3 class="mb-0">All Items</h3>
+                            <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+                                <div class="form-group mb-0">
+                                    <div class="input-group input-group-alternative input-group-merge">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                        </div>
+                                        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </form>
                             <a href="<?= base_url('Items/addItemPage') ?>" class="btn btn-primary">Add Items</a>
                         </div>
                         <!-- Light table -->
