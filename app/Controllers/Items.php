@@ -42,7 +42,6 @@ class Items extends BaseController
                 'item' => $this->itemsModel->getItems($id_item),
                 'title' => 'Detail'
             ];
-            // dd($data);  
             return view('Admin/items/detail', $data);
         } else if (in_groups('customer')) {
             $data = [
@@ -108,7 +107,6 @@ class Items extends BaseController
             'item' => $this->itemsModel->getItems($item_id),
             'title' => 'Update',
         ];
-
         return view('admin/items/edit', $data);
     }
 

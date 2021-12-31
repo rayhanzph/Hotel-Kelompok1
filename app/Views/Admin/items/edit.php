@@ -1,18 +1,3 @@
-<!--
-=========================================================
-* Argon Dashboard - v1.2.0
-=========================================================
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-
-
-* Copyright  Creative Tim (http://www.creative-tim.com)
-* Coded by www.creative-tim.com
-
-
-
-=========================================================
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html>
 
@@ -144,7 +129,10 @@
                     <div class="card">
                         <!-- Card header -->
                         <div class="card-header border-0">
-                            <h3 class="mb-0">Add New Item</h3>
+                            <h3 class="mb-0">Update an Item</h3>
+                            <div class="text-center">
+                            <img src="<?= $item['items_thumbnail'] ?>" alt="" style="width:30%" class="img-thumbnail img-responsive" srcset="">
+                            </div>
                         </div>
                         <!-- Light table -->
                         <div class="table-responsive">
@@ -160,7 +148,7 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="input_type">Item Type</label>
-                                                <select name="tipe_item" id="">
+                                                <select class="form-select" name="tipe_item" id="">
                                                     <option value="hotel">Hotel</option>
                                                     <option value="villa">Villa</option>
                                                 </select>
